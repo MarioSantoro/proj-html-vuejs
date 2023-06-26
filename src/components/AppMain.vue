@@ -27,6 +27,9 @@
         <section>
             <Icons />
         </section>
+        <section>
+            <Appform />
+        </section>
     </main>
 </template>
 <script>
@@ -39,6 +42,7 @@ import TeamMembers from './TeamMembers.vue';
 import DescriptionMember from './DescriptionMember.vue';
 import LatestNews from './LatestNews.vue';
 import Icons from './Icons.vue';
+import Appform from './Appform.vue';
 export default {
     data() {
         return {
@@ -55,6 +59,7 @@ export default {
         DescriptionMember,
         LatestNews,
         Icons,
+        Appform,
     }
 }
 </script>
