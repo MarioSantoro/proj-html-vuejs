@@ -1,5 +1,5 @@
 <template>
-    <div class="background">
+    <div class="background parallax">
         <div class="container-stats content-container">
             <div class="content d-flex justify-content-between align-items-center">
                 <div v-for="stat in dataStatsList" class="stats">
@@ -39,10 +39,9 @@ export default {
 <style lang="scss" scoped>
 @use "../styles/utilities/variables.scss" as *;
 
+
 div.background {
     background-image: url(../assets/Parallax-01.jpg);
-    background-size: cover;
-    background-position: center;
 
     div.container-stats {
         padding: 98px 0;

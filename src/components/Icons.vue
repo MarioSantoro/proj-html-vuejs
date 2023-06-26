@@ -1,5 +1,5 @@
 <template>
-    <div class="background">
+    <div class="background parallax">
         <div class="container-icons content-container">
             <div class="content d-flex justify-content-between align-items-center">
                 <div v-for="icon in dataIconsList" class="icons">

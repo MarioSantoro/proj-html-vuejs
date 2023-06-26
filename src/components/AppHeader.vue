@@ -69,7 +69,7 @@ header {
         ul li {
             color: $ColorBlack;
             font-size: 13px;
-            margin-right: calc(3.2em / 2);
+            margin-right: 2.8rem;
         }
     }
 
