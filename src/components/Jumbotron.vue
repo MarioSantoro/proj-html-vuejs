@@ -14,11 +14,11 @@ export default {
 
 }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 @use "../styles/utilities/variables.scss" as *;
 
 div.jumbotron {
-    height: 787px;
+    height: 800px;
     width: 100%;
     background-image: url(../assets/blog01.jpg);
     background-size: cover;

@@ -23,11 +23,9 @@
                 </div>
             </div>
         </div>
-        <Jumbotron />
     </header>
 </template>
 <script>
-import Jumbotron from './Jumbotron.vue';
 export default {
     data() {
         return {
@@ -42,23 +40,21 @@ export default {
             ]
         }
     },
-    components: {
-        Jumbotron,
-    }
 }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 @use "../styles/utilities/variables.scss" as *;
 
 header {
     height: 90.98px;
     position: fixed;
     width: 100%;
-    background-color: $ColorWhite;
 
     div.container-nav {
-        height: 100%;
         padding: 0 40px;
+        width: 100%;
+        height: 100%;
+        background-color: $ColorWhite;
 
         div.logo {
             img {
