@@ -1,6 +1,6 @@
 <template>
     <header>
-        <div class="container-nav d-flex justify-content-between align-items-center">
+        <div class="container-nav d-flex justify-content-between align-items-center ">
             <div class="logo">
                 <img src="../assets/logo.svg" alt="Logo web-site">
             </div>
@@ -43,8 +43,12 @@ export default {
 }
 </script>
 <style lang="scss">
+@use "../styles/utilities/variables.scss" as *;
+
 header {
     height: 90.98px;
+    position: fixed;
+    width: 100%;
 
     div.container-nav {
         height: 100%;
@@ -58,6 +62,7 @@ header {
         }
 
         ul li {
+            color: $ColorBlack;
             font-size: 13px;
             margin-right: calc(3.2em / 2);
         }
