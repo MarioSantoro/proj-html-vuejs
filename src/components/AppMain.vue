@@ -15,6 +15,12 @@
         <section>
             <StatsOfProject />
         </section>
+        <section>
+            <TeamMembers />
+        </section>
+        <section>
+            <DescriptionMember />
+        </section>
     </main>
 </template>
 <script>
@@ -23,6 +29,8 @@ import Jumbotron from './Jumbotron.vue';
 import AboutUs from './AboutUs.vue';
 import WatchList from './WatchList.vue';
 import StatsOfProject from './StatsOfProject.vue';
+import TeamMembers from './TeamMembers.vue';
+import DescriptionMember from './DescriptionMember.vue';
 export default {
     data() {
         return {
@@ -35,6 +43,8 @@ export default {
         AboutUs,
         WatchList,
         StatsOfProject,
+        TeamMembers,
+        DescriptionMember,
     }
 }
 </script>

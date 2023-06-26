@@ -1,6 +1,6 @@
 <template>
-    <div class="content-container">
-        <div class="row margin-top-cs">
+    <div class="content-container margin-bottom-cs  margin-top-cs">
+        <div class="row">
             <div class="col-12 text-uppercase text-center">
                 <p>Your WatchList</p>
                 <h1 class="fw-bold">Best Hits Movie</h1>
@@ -9,7 +9,7 @@
 
         <div class="row">
             <div v-for="item in dataWatchList" class="col-4 text-center">
-                <img :src="getImagePath(item.image)" alt="Image of pelicula" class="mb-5">
+                <img :src="getImagePath(item.image)" alt="Image of pelicula" class="mb-4">
                 <h6>{{ item.title }}</h6>
                 <p>{{ item.text }}</p>
             </div>

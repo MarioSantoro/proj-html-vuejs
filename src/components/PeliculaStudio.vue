@@ -1,6 +1,6 @@
 <template>
-    <div class="content-container">
-        <div class="row margin-top-cs">
+    <div class="content-container margin-bottom-cs margin-top-cs">
+        <div class="row ">
             <div class="col-12 text-uppercase text-center">
                 <p>Pelicula Studio</p>
                 <h1 class="fw-bold">THIS IS WHAT WE DO</h1>

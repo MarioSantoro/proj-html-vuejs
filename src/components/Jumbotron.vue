@@ -3,7 +3,7 @@
         <div class="content-container  d-flex align-items-center h-100">
             <div class="content text-uppercase">
                 <p>Cinemato Studio</p>
-                <h1>Action And Inspire People</h1>
+                <h1 class="fw-bold">Action And Inspire People</h1>
                 <button class="btn btn-light text-uppercase fw-bold">Read more</button>
             </div>
         </div>
@@ -18,7 +18,7 @@ export default {
 @use "../styles/utilities/variables.scss" as *;
 
 div.jumbotron {
-    height: 800px;
+    height: 900px;
     width: 100%;
     background-image: url(../assets/blog01.jpg);
     background-size: cover;
@@ -30,6 +30,7 @@ div.jumbotron {
         width: 547px;
         font-size: 61px;
         margin: 0;
+
     }
 
     p {
