@@ -24,6 +24,9 @@
         <section>
             <LatestNews />
         </section>
+        <section>
+            <Icons />
+        </section>
     </main>
 </template>
 <script>
@@ -35,6 +38,7 @@ import StatsOfProject from './StatsOfProject.vue';
 import TeamMembers from './TeamMembers.vue';
 import DescriptionMember from './DescriptionMember.vue';
 import LatestNews from './LatestNews.vue';
+import Icons from './Icons.vue';
 export default {
     data() {
         return {
@@ -50,6 +54,7 @@ export default {
         TeamMembers,
         DescriptionMember,
         LatestNews,
+        Icons,
     }
 }
 </script>
