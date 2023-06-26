@@ -9,7 +9,9 @@
 
         <div class="row flex-nowrap overflow-auto">
             <div v-for="item in dataListPelicula" class="col-4">
-                <img :src="getImagePath(item.image)" alt="Image of pelicula" class="mb-3">
+                <figure>
+                    <img :src="getImagePath(item.image)" alt="Image of pelicula" class="mb-3">
+                </figure>
                 <span class="date">{{ item.date }}</span>
                 <h6 class="my-3 fw-bold text-uppercase">{{ item.title }}</h6>
                 <p>{{ item.text }}</p>
@@ -88,8 +90,18 @@ div.col-12 {
 div.col-4 {
     margin-top: $marginTopPellicula;
 
+    figure {
+        overflow: hidden;
+        height: 250px;
+    }
+
     img {
         width: 100%;
+        transition: all .2s ease;
+    }
+
+    img:hover {
+        transform: scale(1.1);
     }
 
     p {

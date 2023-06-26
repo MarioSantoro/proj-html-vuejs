@@ -9,7 +9,9 @@
 
         <div class="row">
             <div v-for="item in dataWatchList" class="col-3 text-center">
-                <img :src="getImagePath(item.image)" alt="Image of pelicula" class="mb-3">
+                <figure>
+                    <img :src="getImagePath(item.image)" alt="Image of pelicula" class="mb-3">
+                </figure>
                 <h6 class="fw-bold text-uppercase">{{ item.nameMember }}</h6>
                 <p>{{ item.role }}</p>
             </div>
@@ -65,8 +67,19 @@ div.col-12 {
 div.col-3 {
     margin-top: $marginTopPellicula;
 
+    figure {
+        width: 270px;
+        height: 329.27px;
+        overflow: hidden;
+    }
+
     img {
         width: 100%;
+        transition: all .2s ease;
+    }
+
+    img:hover {
+        transform: scale(1.1);
     }
 
     h6 {
