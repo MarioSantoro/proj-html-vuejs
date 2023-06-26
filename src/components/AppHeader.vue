@@ -7,19 +7,19 @@
             <nav>
                 <ul class="d-flex align-items-center fw-bold">
                     <li class="text-uppercase h-100" v-for="navItem in listNavBar">
-                        {{ navItem }}
+                        <a href="#">{{ navItem }}</a>
                     </li>
                 </ul>
             </nav>
             <div class="social d-flex align-items-center justify-content-between">
                 <div class="search me-4 ">
-                    <img src="../assets/image (8).svg" alt="">
+                    <img class="svg" src="../assets/image (8).svg" alt="">
                 </div>
                 <div class="social-icons d-flex align-items-center">
-                    <i class="fa-brands fa-facebook-f me-4"></i>
-                    <img class="me-4" src="../assets/image (10).svg" alt="">
-                    <img class="me-4" src="../assets/image (11).svg" alt="">
-                    <img src="../assets/image (12).svg" alt="">
+                    <i class="fa-brands fa-facebook-f me-4 svg"></i>
+                    <img class="me-4 svg" src="../assets/image (10).svg" alt="">
+                    <img class="me-4 svg" src="../assets/image (11).svg" alt="">
+                    <img class="svg" src="../assets/image (12).svg" alt="">
                 </div>
             </div>
         </div>
@@ -70,7 +70,21 @@ header {
             color: $ColorBlack;
             font-size: 13px;
             margin-right: 2.8rem;
+
+            a {
+                text-decoration: none;
+                color: $ColorBlack;
+            }
         }
+    }
+
+    .svg {
+        transition: all .2s ease;
+        cursor: pointer;
+    }
+
+    .svg:hover {
+        filter: invert(50%);
     }
 
     div.search {
