@@ -49,6 +49,9 @@ header {
     height: 90.98px;
     position: fixed;
     width: 100%;
+    box-shadow: 0px -20px 30px 6px #000;
+    -moz-box-shadow: 0px -20px 30px 6px #000;
+    -webkit-box-shadow: 0px -20px 30px 6px #666;
 
     div.container-nav {
         padding: 0 40px;
