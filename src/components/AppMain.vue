@@ -12,6 +12,9 @@
         <section>
             <WatchList />
         </section>
+        <section>
+            <StatsOfProject />
+        </section>
     </main>
 </template>
 <script>
@@ -19,6 +22,7 @@ import PeliculaStudio from './PeliculaStudio.vue';
 import Jumbotron from './Jumbotron.vue';
 import AboutUs from './AboutUs.vue';
 import WatchList from './WatchList.vue';
+import StatsOfProject from './StatsOfProject.vue';
 export default {
     data() {
         return {
@@ -29,7 +33,8 @@ export default {
         PeliculaStudio,
         Jumbotron,
         AboutUs,
-        WatchList
+        WatchList,
+        StatsOfProject,
     }
 }
 </script>

@@ -8,7 +8,7 @@
         </div>
 
         <div class="row">
-            <div v-for="item in dataListPelicula" class="col-4 text-center">
+            <div v-for="item in dataWatchList" class="col-4 text-center">
                 <img :src="getImagePath(item.image)" alt="Image of pelicula" class="mb-5">
                 <h6>{{ item.title }}</h6>
                 <p>{{ item.text }}</p>
@@ -20,7 +20,7 @@
 export default {
     data() {
         return {
-            dataListPelicula: [
+            dataWatchList: [
                 {
                     title: "SEVENTEENTH SUMMER",
                     image: "Gallery-01.jpg",
