@@ -74,14 +74,22 @@ div.col-12 {
 
 div.col-4 {
     margin-top: $marginTopPellicula;
+    cursor: pointer;
+
 
     img {
         width: 80px;
         height: 80px;
+        transition: all .2s ease;
     }
+
 
     p {
         color: $ColorGray;
     }
+}
+
+div.col-4:hover img {
+    transform: translateY(-15%);
 }
 </style>
