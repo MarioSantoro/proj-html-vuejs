@@ -21,6 +21,9 @@
         <section>
             <DescriptionMember />
         </section>
+        <section>
+            <LatestNews />
+        </section>
     </main>
 </template>
 <script>
@@ -31,6 +34,7 @@ import WatchList from './WatchList.vue';
 import StatsOfProject from './StatsOfProject.vue';
 import TeamMembers from './TeamMembers.vue';
 import DescriptionMember from './DescriptionMember.vue';
+import LatestNews from './LatestNews.vue';
 export default {
     data() {
         return {
@@ -45,6 +49,7 @@ export default {
         StatsOfProject,
         TeamMembers,
         DescriptionMember,
+        LatestNews,
     }
 }
 </script>
