@@ -13,7 +13,6 @@
             </div>
         </div>
     </div>
-    <h1>Droga</h1>
 </template>
 <script>
 export default {
