@@ -19,13 +19,15 @@
                     <i class="fa-brands fa-facebook-f me-4"></i>
                     <img class="me-4" src="../assets/image (10).svg" alt="">
                     <img class="me-4" src="../assets/image (11).svg" alt="">
-                    <img class="" src="../assets/image (12).svg" alt="">
+                    <img src="../assets/image (12).svg" alt="">
                 </div>
             </div>
         </div>
+        <Jumbotron />
     </header>
 </template>
 <script>
+import Jumbotron from './Jumbotron.vue';
 export default {
     data() {
         return {
@@ -39,6 +41,9 @@ export default {
                 "Shop",
             ]
         }
+    },
+    components: {
+        Jumbotron,
     }
 }
 </script>
@@ -49,6 +54,7 @@ header {
     height: 90.98px;
     position: fixed;
     width: 100%;
+    background-color: $ColorWhite;
 
     div.container-nav {
         height: 100%;
