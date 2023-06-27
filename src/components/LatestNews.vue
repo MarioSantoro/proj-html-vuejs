@@ -106,6 +106,7 @@ div.col-12 {
 }
 
 div.col-4 {
+    transition: all .5s ease;
     margin-top: $marginTopPellicula;
 
     figure {
@@ -175,6 +176,8 @@ div.cont:hover .right {
     /* for Internet Explorer, Edge */
     scrollbar-width: none;
     // for FireFox
+
+    transition: all .5s ease;
 }
 
 .scroll-video::-webkit-scrollbar {
