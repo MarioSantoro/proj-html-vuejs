@@ -5,18 +5,22 @@
                 <img class="wrapper" src="../assets/image (20).svg" alt="Wrapper image">
             </div>
             <div class="content d-flex justify-content-center align-items-center text-center mt-4">
-                <div v-for="member in dataMemberlist" class="member">
-                    <div v-if="member.visible === true" class="text">
-                        <p>{{ member.description }}</p>
+                <div class="member">
+                    <div class="text ">
+                        <p>{{ dataMemberlist[ActiveIndex].description }}</p>
                         <div class="profile d-flex text-center align-items-center justify-content-center my-4">
                             <div class="image">
-                                <img :src="getImagePath(member.image)" alt="member image">
+                                <img :src="getImagePath(dataMemberlist[ActiveIndex].image)" alt="member image">
                             </div>
                             <div class="name text-start">
-                                <h6 class="text-uppercase">{{ member.nameMember }}</h6>
-                                <p>{{ member.role }}</p>
+                                <h6 class="text-uppercase">{{ dataMemberlist[ActiveIndex].nameMember }}</h6>
+                                <p>{{ dataMemberlist[ActiveIndex].role }}</p>
                             </div>
                         </div>
+                    </div>
+                    <div class="dot">
+                        <i v-for="(member, index) in dataMemberlist" class="fa-solid fa-circle" @click="goToImage(index)"
+                            :class="ActiveIndex === index ? 'active' : ''"></i>
                     </div>
                 </div>
             </div>
@@ -33,36 +37,31 @@ export default {
                     nameMember: 'John Doe',
                     role: "Designer",
                     description: "Curabitur bibendum ex ut sapien blandit viverra. Nunc lobortis mi dui, idEtiam tempor sit amet metus in bibendum. Nunc eros risus, pellentesque a augue Pellentesque fringilla eget mi eu mollis. Mauris commodo.",
-                    visible: true,
                 },
                 {
-                    image: '01.jpg',
+                    image: '02.jpg',
                     nameMember: 'John Doe',
                     role: "Designer",
                     description: "Curabitur bibendum ex ut sapien blandit viverra. Nunc lobortis mi dui, idEtiam tempor sit amet metus in bibendum. Nunc eros risus, pellentesque a augue Pellentesque fringilla eget mi eu mollis. Mauris commodo.",
-                    visible: false,
                 },
                 {
-                    image: '01.jpg',
+                    image: '03.jpg',
                     nameMember: 'John Doe',
                     role: "Designer",
                     description: "Curabitur bibendum ex ut sapien blandit viverra. Nunc lobortis mi dui, idEtiam tempor sit amet metus in bibendum. Nunc eros risus, pellentesque a augue Pellentesque fringilla eget mi eu mollis. Mauris commodo.",
-                    visible: false,
                 },
-                {
-                    image: '01.jpg',
-                    nameMember: 'John Doe',
-                    role: "Designer",
-                    description: "Curabitur bibendum ex ut sapien blandit viverra. Nunc lobortis mi dui, idEtiam tempor sit amet metus in bibendum. Nunc eros risus, pellentesque a augue Pellentesque fringilla eget mi eu mollis. Mauris commodo.",
-                    visible: false,
-                },
-            ]
+            ],
+            ActiveIndex: 0,
         }
     },
     methods: {
         getImagePath: function (img) {
             return new URL(`../assets/${img}`, import.meta.url).href;
         },
+
+        goToImage(Index) {
+            this.ActiveIndex = Index;
+        }
     }
 }
 </script>
@@ -90,6 +89,16 @@ div.background {
                 width: 100%;
                 height: 100%;
             }
+        }
+
+        div.dot i {
+            font-size: 10px;
+            margin-right: .77rem;
+            color: $ColorGray;
+        }
+
+        div.dot i.active {
+            color: $ColorWhite;
         }
 
         img.wrapper {

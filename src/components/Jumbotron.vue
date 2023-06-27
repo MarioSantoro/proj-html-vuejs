@@ -20,7 +20,7 @@ export default {
 div.jumbotron {
     height: 900px;
     width: 100%;
-    background-image: url(../assets/blog01.jpg);
+    background-image: url(../assets/bredcum-img.jpg);
     background-size: cover;
     color: $ColorWhite;
     font-weight: bolder;

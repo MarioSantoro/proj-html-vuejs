@@ -48,6 +48,7 @@ export default {
 header {
     height: 90.98px;
     position: fixed;
+    z-index: 3;
     width: 100%;
     box-shadow: 0px -20px 30px 6px #000;
     -moz-box-shadow: 0px -20px 30px 6px #000;
