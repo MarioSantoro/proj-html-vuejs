@@ -1,20 +1,28 @@
 <template>
-    <div class="content-container margin-bottom-cs margin-top-cs">
-        <div class="row ">
-            <div class="col-12 text-uppercase text-center">
-                <p>Pelicula Studio</p>
-                <h1 class="fw-bold">THIS IS WHAT WE DO</h1>
+    <div class="cont">
+        <div class="content-container margin-bottom-cs margin-top-cs ">
+            <div class="row ">
+                <div class="col-12 text-uppercase text-center">
+                    <p>Pelicula Studio</p>
+                    <h1 class="fw-bold">THIS IS WHAT WE DO</h1>
+                </div>
             </div>
-        </div>
 
-        <div class="row flex-nowrap overflow-auto">
-            <div v-for="item in dataListPelicula" class="col-4">
-                <figure>
-                    <img :src="getImagePath(item.image)" alt="Image of pelicula" class="mb-3">
-                </figure>
-                <span class="date">{{ item.date }}</span>
-                <h6 class="my-3 fw-bold text-uppercase">{{ item.title }}</h6>
-                <p>{{ item.text }}</p>
+            <div class="row flex-nowrap overflow-auto scroll-video">
+                <div class="left" @click="leftScroll">
+                    <img src="../assets/left-arrow.svg" alt="">
+                </div>
+                <div class="right" @click="rightScroll">
+                    <img src="../assets/right-arrow.svg" alt="">
+                </div>
+                <div v-for="item in dataListPelicula" class="col-4">
+                    <figure>
+                        <img :src="getImagePath(item.image)" alt="Image of pelicula" class="mb-3">
+                    </figure>
+                    <span class="date">{{ item.date }}</span>
+                    <h6 class="my-3 fw-bold text-uppercase">{{ item.title }}</h6>
+                    <p>{{ item.text }}</p>
+                </div>
             </div>
         </div>
     </div>
@@ -73,6 +81,16 @@ export default {
         getImagePath: function (img) {
             return new URL(`../assets/${img}`, import.meta.url).href;
         },
+
+        leftScroll() {
+            const left = document.querySelector(".scroll-video");
+            left.scrollBy(-200, 0);
+        },
+
+        rightScroll() {
+            const right = document.querySelector(".scroll-video");
+            right.scrollBy(200, 0);
+        }
     }
 }
 </script>
@@ -112,5 +130,55 @@ div.col-4 {
     span {
         color: $ColorGray;
     }
+}
+
+.left {
+    position: absolute;
+    left: 260px;
+    top: 50%;
+    transform: translate(-50%);
+    z-index: 3;
+    cursor: pointer;
+    transition: all .5s ease;
+    text-shadow: 2px 7px 5px rgba(0, 0, 0, 0.3),
+        0px -4px 10px rgba(255, 255, 255, 0.3);
+    display: none;
+    width: 30px;
+}
+
+.left img,
+.right img {
+    width: 30px;
+    height: 30px;
+}
+
+.right {
+    position: absolute;
+    right: 240px;
+    top: 50%;
+    transform: translate(-50%);
+    cursor: pointer;
+    transition: all .5s ease;
+    text-shadow: 2px 7px 5px rgba(0, 0, 0, 0.3),
+        0px -4px 10px rgba(255, 255, 255, 0.3);
+    display: none;
+    width: 30px;
+}
+
+div.cont:hover .left,
+div.cont:hover .right {
+    display: block;
+}
+
+.scroll-video {
+    -ms-overflow-style: none;
+    /* for Internet Explorer, Edge */
+    scrollbar-width: none;
+    // for FireFox
+}
+
+.scroll-video::-webkit-scrollbar {
+    /* for Chrome, Safari, and Opera */
+    display: none;
 }
 </style>

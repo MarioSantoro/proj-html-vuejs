@@ -21,7 +21,7 @@
         <section>
             <DescriptionMember />
         </section>
-        <section>
+        <section class="position-relative">
             <LatestNews />
         </section>
         <section>
