@@ -56,7 +56,7 @@ export default {
     },
     methods: {
         getImagePath: function (img) {
-            return new URL(`../assets/${img}`, import.meta.url).href;
+            return new URL(`../../assets/${img}`, import.meta.url).href;
         },
 
         goToImage(Index) {
@@ -66,10 +66,10 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-@use "../styles/utilities/variables.scss" as *;
+@use "../../styles/utilities/variables.scss" as *;
 
 div.background {
-    background-image: url(../assets/Parallax-02.jpg);
+    background-image: url(../../assets/Parallax-02.jpg);
     background-size: cover;
     background-position: center;
 

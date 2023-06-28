@@ -10,10 +10,10 @@
 
             <div class="row flex-nowrap overflow-auto scroll-video">
                 <div class="left" @click="leftScroll">
-                    <img src="../assets/left-arrow.svg" alt="">
+                    <img src="../../assets/left-arrow.svg" alt="">
                 </div>
                 <div class="right" @click="rightScroll">
-                    <img src="../assets/right-arrow.svg" alt="">
+                    <img src="../../assets/right-arrow.svg" alt="">
                 </div>
                 <div v-for="item in dataListPelicula" class="col-4">
                     <figure>
@@ -79,7 +79,7 @@ export default {
     },
     methods: {
         getImagePath: function (img) {
-            return new URL(`../assets/${img}`, import.meta.url).href;
+            return new URL(`../../assets/${img}`, import.meta.url).href;
         },
 
         leftScroll() {
@@ -95,7 +95,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-@use "../styles/utilities/variables.scss" as *;
+@use "../../styles/utilities/variables.scss" as *;
 
 div.col-12 {
     color: $ColorBlack;

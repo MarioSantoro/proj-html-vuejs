@@ -37,11 +37,11 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-@use "../styles/utilities/variables.scss" as *;
+@use "../../styles/utilities/variables.scss" as *;
 
 
 div.background {
-    background-image: url(../assets/Parallax-01.jpg);
+    background-image: url(../../assets/Parallax-01.jpg);
 
     div.container-stats {
         padding: 98px 0;

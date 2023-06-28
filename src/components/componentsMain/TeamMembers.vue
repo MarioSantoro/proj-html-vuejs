@@ -48,13 +48,13 @@ export default {
     },
     methods: {
         getImagePath: function (img) {
-            return new URL(`../assets/${img}`, import.meta.url).href;
+            return new URL(`../../assets/${img}`, import.meta.url).href;
         },
     }
 }
 </script>
 <style lang="scss" scoped>
-@use "../styles/utilities/variables.scss" as *;
+@use "../../styles/utilities/variables.scss" as *;
 
 div.col-12 {
     color: $ColorBlack;

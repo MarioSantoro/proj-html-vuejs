@@ -39,7 +39,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-@use '../styles/utilities/variables.scss' as *;
+@use '../../styles/utilities/variables.scss' as *;
 
 div.text {
     width: 50%;

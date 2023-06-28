@@ -20,12 +20,12 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-@use "../styles/utilities/variables.scss" as *;
+@use "../../styles/utilities/variables.scss" as *;
 
 div.container-about {
     background-color: #0a1010;
     height: 575px;
-    background-image: url(../assets/About-Us.jpg);
+    background-image: url(../../assets/About-Us.jpg);
     background-repeat: no-repeat;
     background-position: end;
 

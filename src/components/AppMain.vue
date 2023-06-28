@@ -33,16 +33,16 @@
     </main>
 </template>
 <script>
-import PeliculaStudio from './PeliculaStudio.vue';
-import Jumbotron from './Jumbotron.vue';
-import AboutUs from './AboutUs.vue';
-import WatchList from './WatchList.vue';
-import StatsOfProject from './StatsOfProject.vue';
-import TeamMembers from './TeamMembers.vue';
-import DescriptionMember from './DescriptionMember.vue';
-import LatestNews from './LatestNews.vue';
-import Icons from './Icons.vue';
-import Appform from './Appform.vue';
+import PeliculaStudio from './componentsMain/PeliculaStudio.vue';
+import Jumbotron from './componentsMain/Jumbotron.vue';
+import AboutUs from './componentsMain/AboutUs.vue';
+import WatchList from './componentsMain/WatchList.vue';
+import StatsOfProject from './componentsMain/StatsOfProject.vue';
+import TeamMembers from './componentsMain/TeamMembers.vue';
+import DescriptionMember from './componentsMain/DescriptionMember.vue';
+import LatestNews from './componentsMain/LatestNews.vue';
+import Icons from './componentsMain/Icons.vue';
+import Appform from './componentsMain/Appform.vue';
 export default {
     data() {
         return {

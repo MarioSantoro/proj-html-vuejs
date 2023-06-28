@@ -3,10 +3,10 @@
         <img class="jumbo-image" :src="getImagePath(dataListJumbo[ActiveIndex].image)" alt="">
         <div class="content-container  d-flex align-items-center h-100">
             <div class="slider-button prev" @click="PreviousImage">
-                <img src="../assets/left-arrow.svg" alt="">
+                <img src="../../assets/left-arrow.svg" alt="">
             </div>
             <div class="slider-button next" @click="NextImage">
-                <img src="../assets/right-arrow.svg" alt="">
+                <img src="../../assets/right-arrow.svg" alt="">
             </div>
             <div class="content text-uppercase">
                 <p>{{ dataListJumbo[ActiveIndex].type }}</p>
@@ -37,7 +37,7 @@ export default {
     },
     methods: {
         getImagePath: function (img) {
-            return new URL(`../assets/${img}`, import.meta.url).href;
+            return new URL(`../../assets/${img}`, import.meta.url).href;
         },
 
         PreviousImage() {
@@ -61,7 +61,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-@use "../styles/utilities/variables.scss" as *;
+@use "../../styles/utilities/variables.scss" as *;
 
 div.jumbotron {
     position: relative;
