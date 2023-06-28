@@ -2,7 +2,7 @@
     <div class="background parallax">
         <div class="container-member content-container">
             <div class="text-center">
-                <img class="wrapper" src="../assets/image (20).svg" alt="Wrapper image">
+                <img class="wrapper" src="../../assets/image (20).svg" alt="Wrapper image">
             </div>
             <div class="content d-flex justify-content-center align-items-center text-center mt-4">
                 <div class="member">

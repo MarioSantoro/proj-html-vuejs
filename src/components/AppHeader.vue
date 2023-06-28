@@ -1,6 +1,7 @@
 <template>
     <header>
-        <div class="container-nav d-flex justify-content-between align-items-center ">
+        <a href="#app"><img src="../assets/image (21).svg" alt=""></a>
+        <div class="container-nav d-flex justify-content-between align-items-center " id="wrapper">
             <LogoPage />
             <NavBar />
             <SearchAndIcons />
@@ -30,7 +31,7 @@ export default {
 header {
     height: 90.98px;
     position: fixed;
-    z-index: 3;
+    z-index: 5;
     width: 100%;
     box-shadow: 0px -20px 30px 6px #000;
     -moz-box-shadow: 0px -20px 30px 6px #000;
@@ -41,6 +42,22 @@ header {
         width: 100%;
         height: 100%;
         background-color: $ColorWhite;
+    }
+
+    a {
+        position: fixed;
+        z-index: 10;
+        bottom: 30px;
+        right: 30px;
+        opacity: 1;
+        padding: 9px;
+        border: 2px solid $ColorGray;
+
+        img {
+            width: 20.39px;
+            height: 20.39px;
+            filter: invert(50%);
+        }
     }
 }
 </style>
